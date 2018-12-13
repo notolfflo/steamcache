@@ -1,0 +1,11 @@
+version: "2"
+services:
+  rutorrent:
+    build: .
+    container_name: steamProxy
+    volumes:
+      - /misc/steam/data/:/data/cache
+      - /misc/steam/logs/:/data/logs
+    ports:
+      - 80:80
+    restart: unless-stopped
